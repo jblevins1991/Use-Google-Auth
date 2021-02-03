@@ -1,5 +1,7 @@
 # Use-Google-Auth
 
+![Pipeline](https://github.com/jblevins1991/Use-Google-Auth/workflows/Pipeline/badge.svg)
+
 A single React Hook that loads the google api script in the head of your application and provides login and logout with Google functionality.
 
 ## Installation

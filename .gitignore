@@ -1,0 +1,5 @@
+# depdnency directories
+node_modules/
+
+# build directories
+lib/

@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "module": "ES6",
+    "target": "ES5",
+    "lib": [
+      "ES2015",
+      "DOM"
+    ],
+    "types": [
+      "react",
+    ],
+    "declaration": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "moduleResolution": "Node",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "jsx": "react",
+    "outDir": "./lib"
+  },
+  "include": [
+    "src/**/*",
+  ],
+  "exclude": [
+    "node_modules",
+    "src/**/*.test.ts",
+  ]
+}
