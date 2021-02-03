@@ -1,0 +1,25 @@
+name: Pipeline
+
+on: push
+
+env:
+  NODE_VERSION: '12.16.1'
+
+jobs:
+  typescript-build:
+    name: Run Typescript Build
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - uses: actions/checkout@v2
+        name: Use Node.js ${{ env.NODE_VERSION }}
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+      - name: Install Dependencies
+        run: |
+          # install deps
+          npm ci
+      - name: Typescript Build
+        run: |
+          # run typescript build
+          npm run build
