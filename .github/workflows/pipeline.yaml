@@ -1,0 +1,47 @@
+name: Pipeline
+
+# Pipeline Triggers
+on:
+  # on push to all branches
+  push:
+    branches:
+      - feature/*
+      - bugfix/*
+      - develop
+      - main
+  # on pull requests into all branches
+  pull_request:
+    branches:
+      - feature/*
+      - bugfix/*
+      - develop
+      - main
+  # manual trigger
+  workflow_dispatch:
+
+# Environment variables
+env:
+  NODE_VERSION: '12.16.1'
+
+# All pipeline jobs
+jobs:
+  build:
+    name: Run Typescript Build
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      # Environment setup
+      - name: Use Node.js ${{ env.NODE_VERSION }}
+        uses: actions/checkout@v2
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+      # Install Dependencies
+      - name: Install Dependencies
+        run: |
+          # install deps
+          npm ci
+      # Run Typescript Build
+      - name: Typescript Build
+        run: |
+          # run typescript build
+          npm run build
