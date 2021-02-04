@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "module": "ES6",
+    "module": "CommonJS",
     "target": "ES5",
     "lib": [
       "ES2015",
@@ -8,6 +8,8 @@
     ],
     "types": [
       "react",
+      "jest",
+      "node"
     ],
     "declaration": true,
     "noImplicitAny": true,
@@ -25,6 +27,6 @@
   ],
   "exclude": [
     "node_modules",
-    "src/**/*.test.ts",
+    "src/**/*.test.tsx",
   ]
 }
